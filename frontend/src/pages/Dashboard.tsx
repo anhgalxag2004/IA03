@@ -31,33 +31,26 @@ export const Dashboard: React.FC = () => {
 
   return (
     <div className="min-h-[calc(100vh-8rem)] px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
+      <div className="max-w-xl mx-auto">
+        <div className="mb-6 text-center">
+          <h1 className="text-2xl font-semibold text-gray-900 mb-1">
+            Authentication Successful
+          </h1>
+          <p className="text-sm text-gray-600">You are now logged in.</p>
         </div>
 
-        <div className="max-w-md mx-auto">
-          <Card>
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                Authentication successful
-              </h2>
-              <p className="text-gray-600 mb-6">
-                You are successfully authenticated.
-              </p>
-            </div>
-          </Card>
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Button
-            onClick={handleLogout}
-            variant="secondary"
-            disabled={logoutMutation.isPending}
-          >
-            {logoutMutation.isPending ? "Logging out..." : "Logout"}
-          </Button>
-        </div>
+        <Card>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-gray-700">You have successfully signed in.</p>
+            <Button
+              onClick={handleLogout}
+              variant="secondary"
+              disabled={logoutMutation.isPending}
+            >
+              {logoutMutation.isPending ? "Logging out..." : "Logout"}
+            </Button>
+          </div>
+        </Card>
       </div>
     </div>
   );

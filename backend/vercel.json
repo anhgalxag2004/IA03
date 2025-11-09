@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "functions": {
-    "api/index.ts": {
-      "memory": 1536,
-      "maxDuration": 30
-    }
-  }
-}
