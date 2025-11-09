@@ -1,0 +1,59 @@
+/* App-specific styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  /* Sky-blue primary theme */
+  --primary: #0ea5ff; /* sky-400 */
+  --primary-hover: #0284c7; /* darker sky */
+  --text-on-primary: #ffffff;
+  --background: #f0f9ff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --form-radius: 12px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-hero {
+  background: rgba(14, 165, 255, 0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.btn-modern {
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.18);
+  transform: translateZ(0);
+}
+
+/* Slightly larger base font and improved contrast for forms */
+html {
+  font-size: 16px;
+}
+.form-help {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
